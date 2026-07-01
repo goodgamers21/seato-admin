@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-seato-900: #0f172a;
+  --color-seato-800: #1e293b;
+  --color-seato-700: #334155;
+  --color-seato-600: #475569;
+  --color-seato-500: #64748b;
+  
+  --color-primary-500: #10b981; /* Emerald */
+  --color-primary-600: #059669;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-700/50;
+  }
+  body {
+    @apply bg-[#0b1120] text-slate-300 font-sans antialiased;
+  }
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+  @apply bg-slate-900/50 backdrop-blur-md border border-slate-700/50 shadow-xl;
+}
+
+.glass-card {
+  @apply bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:border-slate-600 transition-all duration-300;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
