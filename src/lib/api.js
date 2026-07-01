@@ -1,4 +1,6 @@
-const API_BASE_URL = '/api/superadmin';
+const API_BASE_URL = import.meta.env.MODE === 'production' 
+  ? 'https://seato-mockup.vercel.app/api/superadmin' 
+  : '/api/superadmin';
 
 export const fetchDashboardStats = async () => {
   const response = await fetch(`${API_BASE_URL}/dashboard`);
