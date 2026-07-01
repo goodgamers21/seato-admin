@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import DashboardHome from './pages/DashboardHome';
 import Restaurants from './pages/Restaurants';
+import Users from './pages/Users';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/dashboard" replace />} />
                 <Route path="/dashboard" element={<DashboardHome />} />
                 <Route path="/restaurants" element={<Restaurants />} />
+                <Route path="/users" element={<Users />} />
                 {/* Fallback */}
                 <Route path="*" element={<Navigate to="/dashboard" replace />} />
               </Routes>
